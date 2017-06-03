@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class ShareInAppActivity: UIActivity {
 
@@ -15,7 +16,7 @@ class ShareInAppActivity: UIActivity {
     }
     
     override var activityImage: UIImage? {
-        return UIImage()
+        return #imageLiteral(resourceName: "making")
     }
     
     override var activityType: UIActivityType? {
@@ -29,5 +30,18 @@ class ShareInAppActivity: UIActivity {
     override func prepare(withActivityItems activityItems: [Any]) {
         
         // TODO: アプリで共有にする
+        guard let image = activityItems[0] as? UIImage else {
+            
+            return
+        }
+        
+        let saveData = UserDefaults.standard
+        let count = saveData.object(forKey: "count") as? Int ?? 0
+        saveData.set(count + 1, forKey: "count")
+        let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+        let ref = Storage.storage().reference(forURL: "gs://tokyocamera-d1e6f.appspot.com")
+        if let data = UIImagePNGRepresentation(image) {
+            ref.child("image/\(deviceId)/\(count).png").putData(data)
+        }
     }
 }

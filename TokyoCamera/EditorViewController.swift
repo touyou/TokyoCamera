@@ -175,6 +175,18 @@ extension EditorViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - CollectionViewDelegateFlowLayout
+
+extension EditorViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = UIScreen.main.bounds.width / 3
+        let height = width / 2
+        return CGSize(width: width, height: height)
+    }
+}
+
 // MARK: - ImagePickerControllerDelegate
 
 extension EditorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -186,3 +198,4 @@ extension EditorViewController: UIImagePickerControllerDelegate, UINavigationCon
         dismiss(animated: true, completion: nil)
     }
 }
+
