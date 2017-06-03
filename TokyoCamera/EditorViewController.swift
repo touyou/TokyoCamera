@@ -51,12 +51,12 @@ class EditorViewController: UIViewController {
         
         UIFont.familyNames.forEach { familyName in
             
-            guard let fontName = UIFont.fontNames(forFamilyName: familyName).first else {
-                
-                return
-            }
+//            guard let fontName = UIFont.fontNames(forFamilyName: familyName).first else {
+//                
+//                return
+//            }
             
-            fontNames.append(fontName)
+            fontNames.append(contentsOf: UIFont.fontNames(forFamilyName: familyName))
         }
     }
 
@@ -181,8 +181,8 @@ extension EditorViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = UIScreen.main.bounds.width / 3
-        let height = width / 2
+        let width = UIScreen.main.bounds.width / 5
+        let height = width
         return CGSize(width: width, height: height)
     }
 }

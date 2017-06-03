@@ -24,23 +24,7 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-        let ref = Storage.storage().reference(forURL: "gs://tokyocamera-d1e6f.appspot.com")
-        let saveData = UserDefaults.standard
-        let count = saveData.object(forKey: "count") as? Int ?? 0
-        
-        if count != 0 {
-            for i in 0 ..< count {
-                ref.child("image/\(deviceId)/\(i).png").getData(maxSize: 1 * 1024 * 1024) { [unowned self] (data, error) in
-                    guard let imageData = data,
-                        let image = UIImage(data: imageData) else {
-                        return
-                    }
-                    
-                    self.images.append(image)
-                }
-            }
-        }
+       reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +43,27 @@ class TimelineViewController: UIViewController {
     }
     */
 
+    
+    func reloadData() {
+        
+        let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+        let ref = Storage.storage().reference(forURL: "gs://tokyocamera-d1e6f.appspot.com")
+        let saveData = UserDefaults.standard
+        let count = saveData.object(forKey: "count") as? Int ?? 0
+        
+        if count != 0 {
+            for i in 0 ..< count {
+                ref.child("image/\(deviceId)/\(i).png").getData(maxSize: 1 * 1024 * 1024) { [unowned self] (data, error) in
+                    guard let imageData = data,
+                        let image = UIImage(data: imageData) else {
+                            return
+                    }
+                    
+                    self.images.append(image)
+                }
+            }
+        }
+    }
 }
 
 // MARK: - CollectionViewDataSource
@@ -80,12 +85,12 @@ extension TimelineViewController: UICollectionViewDataSource {
 
 // MARK: - CollectionViewDelegateFlowLayout
 
-extension EditorViewController: UICollectionViewDelegateFlowLayout {
+extension TimelineViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = UIScreen.main.bounds.width / 3
-        let height = width / 2
+        let height = width
         return CGSize(width: width, height: height)
     }
 }
