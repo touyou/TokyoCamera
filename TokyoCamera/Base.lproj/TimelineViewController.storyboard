@@ -21,9 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7NK-xl-98y">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7NK-xl-98y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AY8-k5-mbx">
                                     <size key="itemSize" width="125" height="130"/>
@@ -39,12 +38,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-VS-QQX">
-                                                    <rect key="frame" x="0.0" y="2" width="125" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-VS-QQX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="130"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="Ygt-VS-QQX" firstAttribute="leading" secondItem="kFD-8h-zgs" secondAttribute="leading" id="FKL-Ek-lxA"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ygt-VS-QQX" secondAttribute="bottom" id="eh1-0R-459"/>
+                                            <constraint firstItem="Ygt-VS-QQX" firstAttribute="top" secondItem="kFD-8h-zgs" secondAttribute="top" id="h7S-ZG-sib"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ygt-VS-QQX" secondAttribute="trailing" id="wG1-O4-5R0"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="Ygt-VS-QQX" id="chX-Ot-VET"/>
                                         </connections>
@@ -53,8 +57,17 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7NK-xl-98y" secondAttribute="bottom" id="4Cs-RX-1jO"/>
+                            <constraint firstAttribute="trailing" secondItem="7NK-xl-98y" secondAttribute="trailing" id="6RH-o5-h0g"/>
+                            <constraint firstItem="7NK-xl-98y" firstAttribute="top" secondItem="ylJ-0b-ayM" secondAttribute="top" id="EZc-fy-VMp"/>
+                            <constraint firstItem="7NK-xl-98y" firstAttribute="leading" secondItem="ylJ-0b-ayM" secondAttribute="leading" id="dRJ-Jk-i5X"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5D9-c5-Koq"/>
+                    <connections>
+                        <outlet property="collectionView" destination="7NK-xl-98y" id="DcW-ca-FJW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHc-gq-bkY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

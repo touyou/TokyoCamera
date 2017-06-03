@@ -121,7 +121,8 @@ class EditorViewController: UIViewController {
     @IBAction func shareButton() {
         
         // MARK: ScreenShot
-        let rect = imageView.frame
+        let rect = imageView.bounds
+//        rect.offsetBy(dx: 0, dy: (navigationController?.navigationBar.frame.size.height)! + UIApplication.shared.statusBarFrame.size.height)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let capture = UIImagePNGRepresentation(UIGraphicsGetImageFromCurrentImageContext()!)

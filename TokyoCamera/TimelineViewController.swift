@@ -55,13 +55,14 @@ class TimelineViewController: UIViewController {
         
         if count != 0 {
             for i in 0 ..< count {
-                ref.child("image/\(deviceId)/\(i).png").getData(maxSize: 1 * 1024 * 1024) { [unowned self] (data, error) in
+                ref.child("image/\(deviceId)/\(i).png").getData(maxSize: 5 * 1024 * 1024) { [unowned self] (data, error) in
                     guard let imageData = data,
                         let image = UIImage(data: imageData) else {
                             return
                     }
                     
                     self.images.append(image)
+                    self.collectionView.reloadData()
                 }
             }
         }
@@ -91,7 +92,7 @@ extension TimelineViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = UIScreen.main.bounds.width / 3
+        let width = UIScreen.main.bounds.width / 5
         let height = width
         return CGSize(width: width, height: height)
     }
