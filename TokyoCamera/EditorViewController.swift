@@ -129,7 +129,9 @@ class EditorViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         let activityItems: [Any] = [image, "#TokyoCamera"]
-        let appActivity = [ShareInAppActivity()]
+        let shareApp = ShareInAppActivity()
+        shareApp.viewContorller = self
+        let appActivity = [shareApp]
         let activitySheet = UIActivityViewController(activityItems: activityItems, applicationActivities: appActivity)
         let excludeActivity: [UIActivityType] = [
             UIActivityType.print,

@@ -51,6 +51,8 @@ class TimelineViewController: UIViewController {
         let saveData = UserDefaults.standard
         let count = saveData.object(forKey: "count") as? Int ?? 0
         
+        print(count)
+        
         if count != 0 {
             for i in 0 ..< count {
                 ref.child("image/\(deviceId)/\(i).png").getData(maxSize: 1 * 1024 * 1024) { [unowned self] (data, error) in

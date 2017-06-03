@@ -10,6 +10,8 @@ import UIKit
 import FirebaseStorage
 
 class ShareInAppActivity: UIActivity {
+    
+    weak var viewContorller: EditorViewController!
 
     override var activityTitle: String? {
         return "TokyoCamera"
@@ -41,7 +43,11 @@ class ShareInAppActivity: UIActivity {
         let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
         let ref = Storage.storage().reference(forURL: "gs://tokyocamera-d1e6f.appspot.com")
         if let data = UIImagePNGRepresentation(image) {
-            ref.child("image/\(deviceId)/\(count).png").putData(data)
+            ref.child("image/\(deviceId)/\(count).png").putData(data, metadata: nil, completion: { (metadata, error) in
+                let alert = UIAlertController(title: "アップロード完了しました。", message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.viewContorller.present(alert, animated: true, completion: nil)
+            })
         }
     }
 }
