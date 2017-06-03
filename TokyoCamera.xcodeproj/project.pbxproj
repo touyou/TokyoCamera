@@ -13,6 +13,10 @@
 		46A355D81EE2844800FF594B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A355D61EE2844800FF594B /* Main.storyboard */; };
 		46A355DA1EE2844800FF594B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A355D91EE2844800FF594B /* Assets.xcassets */; };
 		46A355DD1EE2844800FF594B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A355DB1EE2844800FF594B /* LaunchScreen.storyboard */; };
+		46A355E61EE286A300FF594B /* EditorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A355E41EE286A300FF594B /* EditorViewController.storyboard */; };
+		46A355E91EE286C100FF594B /* TimelineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A355E71EE286C100FF594B /* TimelineViewController.storyboard */; };
+		46A355EB1EE286F600FF594B /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EA1EE286F600FF594B /* EditorViewController.swift */; };
+		46A355ED1EE2870500FF594B /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EC1EE2870500FF594B /* TimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		46A355D91EE2844800FF594B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46A355DC1EE2844800FF594B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46A355DE1EE2844800FF594B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46A355E51EE286A300FF594B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EditorViewController.storyboard; sourceTree = "<group>"; };
+		46A355E81EE286C100FF594B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TimelineViewController.storyboard; sourceTree = "<group>"; };
+		46A355EA1EE286F600FF594B /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		46A355EC1EE2870500FF594B /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		6271537DDA52452B3499FE0C /* Pods-TokyoCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokyoCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokyoCamera/Pods-TokyoCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		83D306CEC99822C915675D11 /* Pods-TokyoCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokyoCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokyoCamera/Pods-TokyoCamera.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,9 +80,13 @@
 				46A355D21EE2844800FF594B /* AppDelegate.swift */,
 				46A355D41EE2844800FF594B /* ViewController.swift */,
 				46A355D61EE2844800FF594B /* Main.storyboard */,
+				46A355E71EE286C100FF594B /* TimelineViewController.storyboard */,
+				46A355E41EE286A300FF594B /* EditorViewController.storyboard */,
 				46A355D91EE2844800FF594B /* Assets.xcassets */,
 				46A355DB1EE2844800FF594B /* LaunchScreen.storyboard */,
 				46A355DE1EE2844800FF594B /* Info.plist */,
+				46A355EA1EE286F600FF594B /* EditorViewController.swift */,
+				46A355EC1EE2870500FF594B /* TimelineViewController.swift */,
 			);
 			path = TokyoCamera;
 			sourceTree = "<group>";
@@ -151,8 +163,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A355E61EE286A300FF594B /* EditorViewController.storyboard in Resources */,
 				46A355DD1EE2844800FF594B /* LaunchScreen.storyboard in Resources */,
 				46A355DA1EE2844800FF594B /* Assets.xcassets in Resources */,
+				46A355E91EE286C100FF594B /* TimelineViewController.storyboard in Resources */,
 				46A355D81EE2844800FF594B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A355D51EE2844800FF594B /* ViewController.swift in Sources */,
+				46A355ED1EE2870500FF594B /* TimelineViewController.swift in Sources */,
+				46A355EB1EE286F600FF594B /* EditorViewController.swift in Sources */,
 				46A355D31EE2844800FF594B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +250,22 @@
 				46A355DC1EE2844800FF594B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		46A355E41EE286A300FF594B /* EditorViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46A355E51EE286A300FF594B /* Base */,
+			);
+			name = EditorViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		46A355E71EE286C100FF594B /* TimelineViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46A355E81EE286C100FF594B /* Base */,
+			);
+			name = TimelineViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -379,6 +411,7 @@
 				46A355E31EE2844800FF594B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
