@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2dZ-OI-jGl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2dZ-OI-jGl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Editor View Controller-->
         <scene sceneID="IsB-e6-IaB">
             <objects>
-                <viewController id="4mm-7n-Z26" sceneMemberID="viewController">
+                <viewController id="4mm-7n-Z26" customClass="EditorViewController" customModule="TokyoCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oYx-4N-mQC"/>
                         <viewControllerLayoutGuide type="bottom" id="V9F-sW-YNB"/>
@@ -37,7 +37,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Fbu-Wr-fyN">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Fbu-Wr-fyN" customClass="FontCollectionViewCell" customModule="TokyoCamera" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -60,6 +60,10 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="fontNameTextLabel" destination="VRn-IY-ipp" id="fde-JJ-pWg"/>
+                                            <outlet property="previewTextLabel" destination="9c7-dV-cR1" id="h6x-2b-mlf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -75,14 +79,31 @@
                     </view>
                     <navigationItem key="navigationItem" id="WoF-eF-IN3">
                         <leftBarButtonItems>
-                            <barButtonItem systemItem="camera" id="4Zy-VQ-nfM"/>
-                            <barButtonItem image="album.png" id="WaJ-Xa-WzK"/>
+                            <barButtonItem systemItem="camera" id="4Zy-VQ-nfM">
+                                <connections>
+                                    <action selector="cameraButton" destination="4mm-7n-Z26" id="oeu-Nl-86F"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="album.png" id="WaJ-Xa-WzK">
+                                <connections>
+                                    <action selector="photoLibraryButton" destination="4mm-7n-Z26" id="Wii-Ih-kKr"/>
+                                </connections>
+                            </barButtonItem>
                         </leftBarButtonItems>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="action" id="7z2-9I-vOo"/>
+                            <barButtonItem systemItem="action" id="7z2-9I-vOo">
+                                <connections>
+                                    <action selector="shareButton" destination="4mm-7n-Z26" id="zFc-LB-Cgq"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="info.png" id="3Pe-e4-dMN"/>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="fontCollectionView" destination="Zto-hL-MAH" id="673-57-bpp"/>
+                        <outlet property="imageView" destination="m8D-FL-iO4" id="aWL-3V-Tik"/>
+                        <outlet property="textLabel" destination="hBC-ii-r9P" id="nDD-xQ-4QW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njy-mI-QQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

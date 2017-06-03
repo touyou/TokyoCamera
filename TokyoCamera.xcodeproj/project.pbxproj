@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34225DADAE58901E44CDDFD3 /* Pods_TokyoCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4070FA6A461F28C8866B7CBB /* Pods_TokyoCamera.framework */; };
+		4619DFA31EE29D150040508D /* TimelineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619DFA21EE29D150040508D /* TimelineCollectionViewCell.swift */; };
 		46A355D31EE2844800FF594B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355D21EE2844800FF594B /* AppDelegate.swift */; };
 		46A355D51EE2844800FF594B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355D41EE2844800FF594B /* ViewController.swift */; };
 		46A355D81EE2844800FF594B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A355D61EE2844800FF594B /* Main.storyboard */; };
@@ -17,6 +18,8 @@
 		46A355E91EE286C100FF594B /* TimelineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A355E71EE286C100FF594B /* TimelineViewController.storyboard */; };
 		46A355EB1EE286F600FF594B /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EA1EE286F600FF594B /* EditorViewController.swift */; };
 		46A355ED1EE2870500FF594B /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EC1EE2870500FF594B /* TimelineViewController.swift */; };
+		46A355EF1EE28BE800FF594B /* FontCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EE1EE28BE800FF594B /* FontCollectionViewCell.swift */; };
+		46A355F11EE294B400FF594B /* ShareInAppActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355F01EE294B400FF594B /* ShareInAppActivity.swift */; };
 		6337C0171EE28A15007A5EB3 /* info-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6337C0161EE28A15007A5EB3 /* info-icon.png */; };
 		6337C0191EE28AA2007A5EB3 /* image-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6337C0181EE28AA2007A5EB3 /* image-icon.png */; };
 		6337C07F1EE28D2C007A5EB3 /* album.png in Resources */ = {isa = PBXBuildFile; fileRef = 6337C01C1EE28D2C007A5EB3 /* album.png */; };
@@ -112,12 +115,11 @@
 		6337C0E01EE293D1007A5EB3 /* timeline.png in Resources */ = {isa = PBXBuildFile; fileRef = 6337C0DA1EE293D1007A5EB3 /* timeline.png */; };
 		6337C0E11EE293D1007A5EB3 /* timeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6337C0DB1EE293D1007A5EB3 /* timeline@2x.png */; };
 		6337C0E21EE293D1007A5EB3 /* timeline@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6337C0DC1EE293D1007A5EB3 /* timeline@3x.png */; };
-		46A355EF1EE28BE800FF594B /* FontCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EE1EE28BE800FF594B /* FontCollectionViewCell.swift */; };
-		46A355F11EE294B400FF594B /* ShareInAppActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355F01EE294B400FF594B /* ShareInAppActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4070FA6A461F28C8866B7CBB /* Pods_TokyoCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokyoCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4619DFA21EE29D150040508D /* TimelineCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCollectionViewCell.swift; sourceTree = "<group>"; };
 		46A355CF1EE2844800FF594B /* TokyoCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokyoCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A355D21EE2844800FF594B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46A355D41EE2844800FF594B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				46A355EC1EE2870500FF594B /* TimelineViewController.swift */,
 				46A355EE1EE28BE800FF594B /* FontCollectionViewCell.swift */,
 				46A355F01EE294B400FF594B /* ShareInAppActivity.swift */,
+				4619DFA21EE29D150040508D /* TimelineCollectionViewCell.swift */,
 			);
 			path = TokyoCamera;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 			files = (
 				46A355D51EE2844800FF594B /* ViewController.swift in Sources */,
 				46A355EF1EE28BE800FF594B /* FontCollectionViewCell.swift in Sources */,
+				4619DFA31EE29D150040508D /* TimelineCollectionViewCell.swift in Sources */,
 				46A355ED1EE2870500FF594B /* TimelineViewController.swift in Sources */,
 				6337C0D01EE28D2C007A5EB3 /* README.md in Sources */,
 				46A355EB1EE286F600FF594B /* EditorViewController.swift in Sources */,
