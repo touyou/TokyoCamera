@@ -18,6 +18,7 @@
 		46A355EB1EE286F600FF594B /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EA1EE286F600FF594B /* EditorViewController.swift */; };
 		46A355ED1EE2870500FF594B /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EC1EE2870500FF594B /* TimelineViewController.swift */; };
 		46A355EF1EE28BE800FF594B /* FontCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355EE1EE28BE800FF594B /* FontCollectionViewCell.swift */; };
+		46A355F11EE294B400FF594B /* ShareInAppActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355F01EE294B400FF594B /* ShareInAppActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		46A355EA1EE286F600FF594B /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		46A355EC1EE2870500FF594B /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		46A355EE1EE28BE800FF594B /* FontCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontCollectionViewCell.swift; sourceTree = "<group>"; };
+		46A355F01EE294B400FF594B /* ShareInAppActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareInAppActivity.swift; sourceTree = "<group>"; };
 		6271537DDA52452B3499FE0C /* Pods-TokyoCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokyoCamera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokyoCamera/Pods-TokyoCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		83D306CEC99822C915675D11 /* Pods-TokyoCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokyoCamera.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokyoCamera/Pods-TokyoCamera.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				46A355EA1EE286F600FF594B /* EditorViewController.swift */,
 				46A355EC1EE2870500FF594B /* TimelineViewController.swift */,
 				46A355EE1EE28BE800FF594B /* FontCollectionViewCell.swift */,
+				46A355F01EE294B400FF594B /* ShareInAppActivity.swift */,
 			);
 			path = TokyoCamera;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				46A355ED1EE2870500FF594B /* TimelineViewController.swift in Sources */,
 				46A355EB1EE286F600FF594B /* EditorViewController.swift in Sources */,
 				46A355D31EE2844800FF594B /* AppDelegate.swift in Sources */,
+				46A355F11EE294B400FF594B /* ShareInAppActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
