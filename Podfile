@@ -7,4 +7,6 @@ target 'TokyoCamera' do
 
   # Pods for TokyoCamera
   pod 'Firebase'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34225DADAE58901E44CDDFD3 /* Pods_TokyoCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4070FA6A461F28C8866B7CBB /* Pods_TokyoCamera.framework */; };
 		4619DFA31EE29D150040508D /* TimelineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619DFA21EE29D150040508D /* TimelineCollectionViewCell.swift */; };
+		4619DFA51EE2A1080040508D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4619DFA41EE2A1080040508D /* GoogleService-Info.plist */; };
 		46A355D31EE2844800FF594B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355D21EE2844800FF594B /* AppDelegate.swift */; };
 		46A355D51EE2844800FF594B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A355D41EE2844800FF594B /* ViewController.swift */; };
 		46A355D81EE2844800FF594B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A355D61EE2844800FF594B /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		4070FA6A461F28C8866B7CBB /* Pods_TokyoCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TokyoCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4619DFA21EE29D150040508D /* TimelineCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCollectionViewCell.swift; sourceTree = "<group>"; };
+		4619DFA41EE2A1080040508D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46A355CF1EE2844800FF594B /* TokyoCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokyoCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A355D21EE2844800FF594B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46A355D41EE2844800FF594B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				46A355EE1EE28BE800FF594B /* FontCollectionViewCell.swift */,
 				46A355F01EE294B400FF594B /* ShareInAppActivity.swift */,
 				4619DFA21EE29D150040508D /* TimelineCollectionViewCell.swift */,
+				4619DFA41EE2A1080040508D /* GoogleService-Info.plist */,
 			);
 			path = TokyoCamera;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				6337C0191EE28AA2007A5EB3 /* image-icon.png in Resources */,
 				46A355E61EE286A300FF594B /* EditorViewController.storyboard in Resources */,
 				6337C0801EE28D2C007A5EB3 /* album@2x.png in Resources */,
+				4619DFA51EE2A1080040508D /* GoogleService-Info.plist in Resources */,
 				6337C0D21EE28D2C007A5EB3 /* TokyoIcon@1024px.jpg in Resources */,
 				6337C0861EE28D2C007A5EB3 /* sample.jpg in Resources */,
 				6337C0E21EE293D1007A5EB3 /* timeline@3x.png in Resources */,
