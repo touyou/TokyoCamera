@@ -51,13 +51,16 @@ class EditorViewController: UIViewController {
         
         UIFont.familyNames.forEach { familyName in
             
-//            guard let fontName = UIFont.fontNames(forFamilyName: familyName).first else {
-//                
-//                return
-//            }
-            
             fontNames.append(contentsOf: UIFont.fontNames(forFamilyName: familyName))
         }
+        
+        let layout = UICollectionViewFlowLayout()
+        let margin = 2.0
+        let itemWidth = (self.view.bounds.width - CGFloat(2.0 * margin)) / 3.0
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth * 0.7)
+        layout.sectionInset = UIEdgeInsetsMake(0.0, 0.0, CGFloat(margin), 0.0)
+        layout.minimumInteritemSpacing = CGFloat(margin)
+        fontCollectionView.collectionViewLayout = layout
     }
 
     override func didReceiveMemoryWarning() {
@@ -175,18 +178,6 @@ extension EditorViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         textLabel.font = UIFont(name: fontNames[indexPath.row], size: textLabel.font.pointSize)
-    }
-}
-
-// MARK: - CollectionViewDelegateFlowLayout
-
-extension EditorViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let width = UIScreen.main.bounds.width / 5
-        let height = width
-        return CGSize(width: width, height: height)
     }
 }
 
